@@ -1,14 +1,16 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-
-class MainWindow : public QMainWindow
+#include <QtWidgets>
+#include "area.h"
+class Window : public QWidget
 {
-    Q_OBJECT
-
+protected:
+    QTextCodec *codec;
+    Area * area; // область отображения рисунка
+    QPushButton * btn;
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    Window();
 };
+
 #endif // MAINWINDOW_H
